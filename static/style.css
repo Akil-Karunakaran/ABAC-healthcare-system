@@ -1,0 +1,157 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f0f3f7;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Container Styling */
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease;
+    position: relative;
+}
+
+/* Title Styling */
+h1.title, h2.title {
+    font-size: 24px;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+.form {
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* Input Fields */
+.input, .dropdown, .textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input:focus, .dropdown:focus, .textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button Styling */
+.btn, .btn-logout {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn:hover, .btn-logout:hover {
+    background-color: #2980b9;
+}
+
+/* Patient Details and Messages */
+ul.patient-details, ul.messages, ul.prescriptions {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+ul.patient-details li, ul.messages li, ul.prescriptions li {
+    padding: 12px;
+    background-color: #ecf0f1;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+/* Hyperlinks Styling */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Titles and Highlight Text */
+h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Patient List */
+.patient-list {
+    text-align: left;
+}
+
+.patient-list li {
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.patient-list li:hover {
+    background-color: #bdc3c7;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .btn, .btn-logout {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h1.title, h2.title {
+        font-size: 20px;
+    }
+}

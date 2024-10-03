@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Book an Appointment</h2>
+        <form action="/get_appointment" method="POST" class="form">
+            <label for="doctor">Choose a Doctor:</label>
+            <select name="doctor_id" class="dropdown" required>
+                {% for doctor in doctors %}
+                    <option value="{{ doctor['_id'] }}">{{ doctor['name'] }}</option>
+                {% endfor %}
+            </select><br>
+            <button type="submit" class="btn">Book Appointment</button>
+        </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

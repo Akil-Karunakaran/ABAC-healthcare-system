@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Patient's Dashboard</h2>
+        <h3>Welcome, {{ name }}</h3>
+
+        <h3>Prescription</h3>
+        <p>{{ prescription }}</p>
+
+        <h3>Patient Details</h3>
+        <ul class="patient-details">
+            <li><strong>Age:</strong> {{ age }}</li>
+            <li><strong>Address:</strong> {{ address }}</li>
+            <li><strong>Phone Number:</strong> {{ phone_number }}</li>
+        </ul>
+        <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+    </div>
+</body>
+</html>
